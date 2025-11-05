@@ -32,10 +32,8 @@ const Header = () => {
   return (
     <header
       className={cn(
-        'fixed top-0 w-full z-50 transition-all duration-300',
-        scrolled
-          ? 'bg-white shadow-md py-4'
-          : 'bg-white/95 backdrop-blur py-6'
+        'fixed top-0 w-full z-50 transition-all duration-300 border-b border-gray-100',
+        scrolled ? 'bg-white shadow-md py-4' : 'bg-white py-5'
       )}
     >
       <nav className="container-custom">
@@ -96,6 +94,14 @@ const Header = () => {
           </button>
         </div>
       </nav>
+
+      {/* Backdrop for mobile menu */}
+      {mobileMenuOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-white lg:hidden"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
 
       {/* Mobile menu */}
       <div

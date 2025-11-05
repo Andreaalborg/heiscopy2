@@ -8,7 +8,7 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline'
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-gray-50 to-blue-100">
+    <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-gray-50 to-blue-100 pt-28 md:pt-36">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
