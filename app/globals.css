@@ -1,166 +1,96 @@
-/* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
   :root {
-    /* IMEM Brand Colors */
-    --primary-blue: #5DADE2;
-    --primary-dark: #2874A6;
-    --primary-light: #AED6F1;
-    
-    /* Accent Colors */
-    --accent-gold: #F39C12;
-    --accent-hover: #E67E22;
-    
-    /* Neutral Colors */
-    --white: #FFFFFF;
-    --gray-50: #F8F9FA;
-    --gray-100: #E5E7EB;
-    --gray-700: #2C3E50;
-    --gray-900: #111827;
-  }
-
-  body {
-    font-family: 'Inter', sans-serif;
-    color: #2C3E50;
-    background-color: white;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: #111827;
-    line-height: 1.2;
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
 }
 
-@layer components {
-  /* Button styles */
-  .btn {
-    @apply inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
-  }
-
-  .btn-primary {
-    background-color: #F39C12;
-    color: white;
-  }
-  
-  .btn-primary:hover {
-    background-color: #E67E22;
-  }
-  
-  .btn-primary:focus {
-    --tw-ring-color: #F39C12;
-  }
-
-  .btn-secondary {
-    background-color: #5DADE2;
-    color: white;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #2874A6;
-  }
-  
-  .btn-secondary:focus {
-    --tw-ring-color: #5DADE2;
-  }
-
-  .btn-outline {
-    @apply border-2;
-    border-color: #5DADE2;
-    color: #5DADE2;
-  }
-  
-  .btn-outline:hover {
-    background-color: #5DADE2;
-    color: white;
-  }
-  
-  .btn-outline:focus {
-    --tw-ring-color: #5DADE2;
-  }
-
-  .btn-sm {
-    @apply px-4 py-2 text-sm;
-  }
-
-  .btn-md {
-    @apply px-6 py-3 text-base;
-  }
-
-  .btn-lg {
-    @apply px-8 py-4 text-lg;
-  }
-
-  /* Card styles */
-  .card {
-    @apply bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 p-6;
-  }
-
-  /* Form styles */
-  .form-input {
-    @apply w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-all;
-    border-color: #E5E7EB;
-  }
-  
-  .form-input:focus {
-    --tw-ring-color: #5DADE2;
-  }
-
-  .form-label {
-    @apply block text-sm font-medium mb-2;
-    color: #2C3E50;
-  }
-
-  /* Container */
-  .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-
-  /* Section spacing */
-  .section {
-    @apply py-16 md:py-24;
-  }
-
-  /* Heading styles */
-  .heading-1 {
-    @apply text-4xl md:text-6xl;
-  }
-
-  .heading-2 {
-    @apply text-3xl md:text-5xl;
-  }
-
-  .heading-3 {
-    @apply text-2xl md:text-4xl;
-  }
-
-  .heading-4 {
-    @apply text-xl md:text-3xl;
-  }
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer utilities {
-  /* Text balance */
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Custom utility classes */
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
 
-  /* Animation delays */
-  .animation-delay-200 {
-    animation-delay: 200ms;
-  }
+.heading-1 {
+  @apply text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight;
+}
 
-  .animation-delay-400 {
-    animation-delay: 400ms;
-  }
+.heading-2 {
+  @apply text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight;
+}
 
-  .animation-delay-600 {
-    animation-delay: 600ms;
-  }
+.section {
+  @apply py-16 lg:py-24;
+}
+
+/* Form styles */
+.form-label {
+  @apply block text-sm font-medium text-gray-700 mb-2;
+}
+
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors;
+}
+
+.form-input:focus {
+  @apply ring-2 ring-blue-500 border-blue-500;
+}
+
+/* IMEM Brand Colors */
+.text-imem-blue {
+  @apply text-blue-600;
+}
+
+.bg-imem-blue {
+  @apply bg-blue-600;
+}
+
+.bg-imem-blue-light {
+  @apply bg-blue-500;
+}
+
+.border-imem-blue {
+  @apply border-blue-600;
+}
+
+.hover\:border-imem-blue:hover {
+  @apply border-blue-600;
+}
+
+/* IMEM Gray Colors */
+.text-imem-gray-900 {
+  @apply text-gray-900;
+}
+
+.text-imem-gray-600 {
+  @apply text-gray-600;
+}
+
+.text-imem-gray-700 {
+  @apply text-gray-700;
+}
+
+.bg-imem-gray-50 {
+  @apply bg-gray-50;
 }

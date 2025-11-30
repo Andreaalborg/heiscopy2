@@ -9,9 +9,7 @@ import { cn } from '@/lib/utils'
 
 const navigation = [
   { name: 'Hjem', href: '/' },
-  { name: 'Om oss', href: '/om-oss' },
-  { name: 'Tjenester', href: '/tjenester' },
-  { name: 'Prosjekter', href: '/prosjekter' },
+  { name: 'Produkter', href: '/produkter' },
   { name: 'Kontakt', href: '/kontakt' },
 ]
 
@@ -68,15 +66,17 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Language Selector */}
+          {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <button className="text-sm font-medium text-imem-gray-600 hover:text-imem-blue">
-              NO
-            </button>
-            <span className="text-imem-gray-300">|</span>
-            <button className="text-sm font-medium text-imem-gray-600 hover:text-imem-blue">
-              EN
-            </button>
+            <a 
+              href="tel:21418103" 
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+              </svg>
+              Ring oss
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -151,15 +151,15 @@ const Header = () => {
                 ))}
               </div>
               <div className="py-6">
-                <div className="flex gap-4">
-                  <button className="text-base font-semibold text-imem-gray-900">
-                    NO
-                  </button>
-                  <span className="text-imem-gray-300">|</span>
-                  <button className="text-base font-semibold text-imem-gray-600">
-                    EN
-                  </button>
-                </div>
+                <a 
+                  href="tel:21418103" 
+                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg font-medium"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                  </svg>
+                  Ring oss: 21 41 81 03
+                </a>
               </div>
             </div>
           </div>

@@ -1,81 +1,82 @@
 'use client'
 
 import React from 'react'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
-import Button from '@/components/ui/Button'
-import { PhoneIcon, CalendarIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
+import { PhoneIcon, EnvelopeIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 
 const CTA = () => {
   return (
-    <section className="section bg-gray-50">
+    <section className="section bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Text content */}
+        <div className="text-center max-w-3xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="heading-2 text-gray-900 mb-6">
-              La oss ta vare på dine heiser
+            <h2 className="heading-2 text-white mb-6">
+              Ta kontakt med oss
             </h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Med over 30 års erfaring og direkte tilgang til IMEM kvalitetsprodukter, 
-              er vi din beste partner for heisløsninger i Norge.
+            <p className="text-xl text-gray-300 mb-10">
+              Har du spørsmål om heisløsninger? Vi er her for å hjelpe deg.
             </p>
-            
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-start gap-3">
-                <CheckCircleIcon className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-700">Gratis befaring og tilstandsvurdering</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircleIcon className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-700">Skreddersydde serviceavtaler</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircleIcon className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-700">24/7 nødservice inkludert</span>
-              </li>
-            </ul>
           </motion.div>
 
-          {/* Right side - Contact box */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+          {/* Contact Options */}
+          <motion.div 
+            className="grid md:grid-cols-2 gap-6 mb-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                Kontakt oss i dag
-              </h3>
-              
-              <div className="space-y-4 mb-6">
-                <a href="tel:+4700000000" className="flex items-center gap-4 p-4 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors group">
-                  <PhoneIcon className="h-6 w-6 text-blue-600 group-hover:scale-110 transition-transform" />
-                  <div>
-                    <div className="font-semibold text-gray-900">Ring oss direkte</div>
-                    <div className="text-sm text-gray-600">+47 00 00 00 00</div>
-                  </div>
-                </a>
-                
-                <Link href="/kontakt" className="flex items-center gap-4 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-                  <CalendarIcon className="h-6 w-6 text-gray-600" />
-                  <div>
-                    <div className="font-semibold text-gray-900">Book befaring</div>
-                    <div className="text-sm text-gray-600">Vi kommer til deg</div>
-                  </div>
-                </Link>
+            <a 
+              href="tel:21418103" 
+              className="flex items-center justify-center gap-4 p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all group"
+            >
+              <div className="w-14 h-14 bg-sky-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <PhoneIcon className="h-7 w-7 text-white" />
               </div>
-              
-              <p className="text-center text-sm text-gray-500">
-                Åpent man-fre: 07:00 - 16:00
-              </p>
-            </div>
+              <div className="text-left">
+                <div className="text-sm text-gray-400">Ring oss</div>
+                <div className="text-xl font-semibold">21 41 81 03</div>
+              </div>
+            </a>
+            
+            <a 
+              href="mailto:post@imemnorway.no" 
+              className="flex items-center justify-center gap-4 p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all group"
+            >
+              <div className="w-14 h-14 bg-sky-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <EnvelopeIcon className="h-7 w-7 text-white" />
+              </div>
+              <div className="text-left">
+                <div className="text-sm text-gray-400">Send e-post</div>
+                <div className="text-xl font-semibold">post@imemnorway.no</div>
+              </div>
+            </a>
+          </motion.div>
+
+          {/* Link to IMEM main site */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-gray-400 mb-4">
+              Vil du vite mer om IMEM og våre produkter?
+            </p>
+            <a 
+              href="https://imem.com/en/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 font-medium transition-colors"
+            >
+              Besøk IMEM.com
+              <ArrowTopRightOnSquareIcon className="w-5 h-5" />
+            </a>
           </motion.div>
         </div>
       </div>
