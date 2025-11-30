@@ -48,8 +48,8 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/kontakt">
-                <Button size="lg" variant="primary" className="bg-sky-500 hover:bg-sky-600">
+              <Link href="/kontakt" className="inline-block">
+                <Button size="lg" variant="primary" className="bg-sky-500 hover:bg-sky-600 w-full sm:w-auto whitespace-nowrap">
                   Kontakt oss
                   <ArrowRightIcon className="ml-2 h-5 w-5" />
                 </Button>
@@ -58,8 +58,9 @@ const Hero = () => {
                 href="https://imem.com/en/" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                className="inline-block"
               >
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900 w-full sm:w-auto whitespace-nowrap">
                   Se produkter på IMEM.com
                 </Button>
               </a>
