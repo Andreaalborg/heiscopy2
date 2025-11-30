@@ -8,15 +8,22 @@ import { PhoneIcon, EnvelopeIcon, ArrowTopRightOnSquareIcon } from '@heroicons/r
 export default function ContactPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 pt-32 pb-20">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.03) 35px, rgba(255,255,255,.03) 70px)`,
-          }} />
+      {/* Hero Section with Background Image */}
+      <section className="relative min-h-[400px] flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <Image
+            src="/images/hero-kontakt.png"
+            alt="IMEM team planlegger"
+            fill
+            className="object-cover object-[center_30%] md:object-[center_35%]"
+            priority
+          />
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-slate-900/60" />
         </div>
         
-        <div className="container-custom relative z-10">
+        <div className="container-custom relative z-10 py-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -27,7 +34,7 @@ export default function ContactPage() {
               Kontakt oss
             </h1>
             <p className="text-xl text-gray-300">
-              Vi er her for å hjelpe deg med alle dine heisspørsmål.
+              Vi er her for å hjelpe deg med alle spørsmål om heis.
             </p>
           </motion.div>
         </div>

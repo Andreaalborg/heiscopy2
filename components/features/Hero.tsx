@@ -5,16 +5,22 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Button from '@/components/ui/Button'
-import { ArrowRightIcon, PhoneIcon } from '@heroicons/react/24/outline'
+import { ArrowRightIcon } from '@heroicons/react/24/outline'
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 pt-28 md:pt-36">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.03) 35px, rgba(255,255,255,.03) 70px)`,
-        }} />
+    <section className="relative min-h-[90vh] flex items-center pt-28 md:pt-36">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hero-bg.jpg"
+          alt="IMEM heisteknikere på jobb"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/80 to-slate-900/60" />
       </div>
 
       <div className="container-custom relative z-10">
@@ -53,7 +59,7 @@ const Hero = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
                   Se produkter på IMEM.com
                 </Button>
               </a>
@@ -81,49 +87,8 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Image/Graphic */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative hidden lg:block"
-          >
-            <div className="aspect-square relative">
-              {/* IMEM Logo Display */}
-              <div className="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-blue-600/20 rounded-2xl backdrop-blur-sm border border-white/10" />
-              <div className="absolute inset-0 flex items-center justify-center p-12">
-                <Image 
-                  src="/images/imem-logo.png" 
-                  alt="IMEM Lifts" 
-                  width={300}
-                  height={300}
-                  className="w-full h-auto max-w-[280px] drop-shadow-2xl"
-                />
-              </div>
-
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-sky-500 rounded-full opacity-20 blur-xl" />
-              <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-blue-500 rounded-full opacity-20 blur-2xl" />
-            </div>
-
-            {/* Contact Card */}
-            <motion.div 
-              className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-2xl p-4 flex items-center gap-3"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.4 }}
-            >
-              <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center">
-                <PhoneIcon className="w-6 h-6 text-sky-600" />
-              </div>
-              <div>
-                <div className="text-xs text-gray-500">Ring oss</div>
-                <a href="tel:21418103" className="font-semibold text-gray-900 hover:text-sky-600">
-                  21 41 81 03
-                </a>
-              </div>
-            </motion.div>
-          </motion.div>
+          {/* Right side - Empty for background image to show */}
+          <div className="hidden lg:block" />
         </div>
       </div>
     </section>

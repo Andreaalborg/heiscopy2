@@ -14,7 +14,7 @@ const reasons = [
   {
     icon: CheckBadgeIcon,
     title: 'Autorisert IMEM-partner',
-    description: 'Offisiell forhandler med direkte tilgang til IMEMs kvalitetsprodukter og support fra Spania.'
+    description: 'Offisiell forhandler med direkte tilgang til IMEMs kvalitetsprodukter og teknisk support.'
   },
   {
     icon: UserGroupIcon,
@@ -49,7 +49,7 @@ const WhyChooseUs = () => {
               Hvorfor velge oss?
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              IMEM Lifts Norway kombinerer lokal ekspertise med internasjonal kvalitet fra IMEM i Spania.
+              IMEM Lifts Norway kombinerer lokal ekspertise med internasjonal kvalitet fra IMEM.
             </p>
 
             <div className="space-y-6">

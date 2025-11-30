@@ -1,60 +1,76 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
+import { 
+  ArrowTopRightOnSquareIcon,
+  BuildingOffice2Icon,
+  CubeIcon,
+  HomeIcon,
+  WrenchScrewdriverIcon,
+  ArrowPathIcon,
+  ShieldCheckIcon
+} from '@heroicons/react/24/outline'
 
 const products = [
   {
     title: 'Personheiser',
-    description: 'Moderne og komfortable personheiser for boligbygg, kontorer og offentlige bygg. Tilpasset alle behov og bygningstyper.',
-    image: '🏢',
+    description: 'Moderne personheiser for boligbygg, kontorer og offentlige bygg. Inkluderer Silens Pro-serien og SwiftRise med eller uten maskinrom.',
+    icon: BuildingOffice2Icon,
     link: 'https://imem.com/en/lifts/'
   },
   {
     title: 'Vareheiser',
-    description: 'Robuste vareheiser designet for effektiv transport av gods. Ideell for lager, industri og forretningsbygg.',
-    image: '📦',
+    description: 'Robuste vareheiser for effektiv transport av gods. RHINOlift og RHINOlift Pro er ideelle for lager, industri og næringsbygg.',
+    icon: CubeIcon,
     link: 'https://imem.com/en/lifts/'
   },
   {
-    title: 'Tilgjengelighetsheiser',
-    description: 'Heiser designet for universell utforming. Sikrer tilgjengelighet for alle brukere i alle typer bygg.',
-    image: '♿',
+    title: 'Hjemmeheiser',
+    description: 'Kompakte heisløsninger for private boliger. IMPROlift og IMPROlift Plus gir komfort og tilgjengelighet i hjemmet.',
+    icon: HomeIcon,
     link: 'https://imem.com/en/lifts/'
   },
   {
-    title: 'Rulletrapper',
-    description: 'Energieffektive rulletrapper for kjøpesentre, stasjoner og offentlige bygg. Høy kapasitet og driftssikkerhet.',
-    image: '🛗',
-    link: 'https://imem.com/en/escalators/'
+    title: 'Heismodernisering',
+    description: 'Oppgrader eksisterende heiser med Revolution UP. Øk sikkerhet, komfort og energieffektivitet uten full utskiftning.',
+    icon: ArrowPathIcon,
+    link: 'https://imem.com/en/lifts/'
   },
   {
-    title: 'Rullende fortau',
-    description: 'Horisontale transportløsninger for flyplasser, stasjoner og store bygningskomplekser.',
-    image: '🚶',
-    link: 'https://imem.com/en/moving-walks/'
+    title: 'Heiskomponenter',
+    description: 'Komplette heiskomponenter inkludert heishytter, strukturer og reservedeler. Alt du trenger for vedlikehold og reparasjon.',
+    icon: WrenchScrewdriverIcon,
+    link: 'https://imem.com/en/lifts/'
   },
   {
-    title: 'IMEM Connectivity',
-    description: 'Smart heisteknologi med fjernovervåking, prediktivt vedlikehold og sanntidsdata for optimal drift.',
-    image: '📡',
-    link: 'https://imem.com/en/connectivity/'
+    title: 'Service og vedlikehold',
+    description: 'Regelmessig service og vedlikehold for optimal drift og sikkerhet. Vi tilbyr serviceavtaler tilpasset dine behov.',
+    icon: ShieldCheckIcon,
+    link: '/kontakt'
   }
 ]
 
 export default function ProdukterPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 pt-32 pb-20">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.03) 35px, rgba(255,255,255,.03) 70px)`,
-          }} />
+      {/* Hero Section with Background Image */}
+      <section className="relative min-h-[400px] flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-produkter.jpg"
+            alt="Heissjakt"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-slate-900/70" />
         </div>
         
-        <div className="container-custom relative z-10">
+        <div className="container-custom relative z-10 py-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -100,31 +116,41 @@ export default function ProdukterPage() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product, index) => (
-              <motion.a
-                key={product.title}
-                href={product.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group bg-gray-50 rounded-2xl p-8 hover:bg-sky-50 hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-sky-200"
-              >
-                <div className="text-5xl mb-4">{product.image}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-sky-600 transition-colors">
-                  {product.title}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {product.description}
-                </p>
-                <span className="inline-flex items-center gap-2 text-sky-600 font-medium">
-                  Se produkter
-                  <ArrowTopRightOnSquareIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </motion.a>
-            ))}
+            {products.map((product, index) => {
+              const Icon = product.icon
+              const isExternal = product.link.startsWith('http')
+              return (
+                <motion.a
+                  key={product.title}
+                  href={product.link}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group bg-gray-50 rounded-2xl p-8 hover:bg-sky-50 hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-sky-200"
+                >
+                  <div className="w-16 h-16 bg-sky-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-sky-200 transition-colors">
+                    <Icon className="w-8 h-8 text-sky-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-sky-600 transition-colors">
+                    {product.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {product.description}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-sky-600 font-medium">
+                    {isExternal ? 'Les mer på IMEM.com' : 'Kontakt oss'}
+                    {isExternal ? (
+                      <ArrowTopRightOnSquareIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    ) : (
+                      <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    )}
+                  </span>
+                </motion.a>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -143,8 +169,8 @@ export default function ProdukterPage() {
                 Om IMEM
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                IMEM er en ledende europeisk heisprodusent med hovedkontor i Spania. 
-                Med over 40 års erfaring leverer IMEM innovative og pålitelige heisløsninger 
+                IMEM er en ledende europeisk heisprodusent med over 50 års erfaring. 
+                Siden 1968 har IMEM levert innovative og pålitelige heisløsninger 
                 til kunder over hele verden.
               </p>
               <p className="text-lg text-gray-600 mb-8">
@@ -175,4 +201,3 @@ export default function ProdukterPage() {
     </>
   )
 }
-

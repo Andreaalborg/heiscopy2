@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="text-white" style={{ backgroundColor: '#302f2e' }}>
       <div className="container-custom py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -15,7 +15,7 @@ const Footer = () => {
                 alt="IMEM Lifts" 
                 width={50}
                 height={50}
-                className="h-12 w-auto brightness-0 invert"
+                className="h-12 w-auto"
               />
               <div>
                 <h3 className="text-xl font-bold">IMEM Lifts Norway AS</h3>
@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Sider */}
           <div>
             <h4 className="font-semibold mb-4 text-white">Sider</h4>
             <ul className="space-y-2">
@@ -64,8 +64,11 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
+          </div>
 
-            <h4 className="font-semibold mb-4 text-white mt-6">IMEM</h4>
+          {/* IMEM Links - Right side */}
+          <div>
+            <h4 className="font-semibold mb-4 text-white">IMEM</h4>
             <ul className="space-y-2">
               <li>
                 <a 
@@ -95,12 +98,12 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://imem.com/en/connectivity/" 
+                  href="https://imem.com/en/about/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-sky-400 transition-colors inline-flex items-center gap-1"
                 >
-                  Connectivity
+                  Om IMEM
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-3 h-3">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                   </svg>
@@ -108,26 +111,9 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
-          {/* Certification */}
-          <div>
-            <h4 className="font-semibold mb-4 text-white">Sertifisering</h4>
-            <div className="bg-white rounded-lg p-4 inline-block">
-              <Image 
-                src="/images/sentral-godkjenning.png" 
-                alt="Sentralt Godkjent" 
-                width={100}
-                height={100}
-                className="h-20 w-auto"
-              />
-            </div>
-            <p className="text-sm text-gray-400 mt-3">
-              Sentralt godkjent for heisarbeid i Norge
-            </p>
-          </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-gray-700 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-400">
             &copy; {new Date().getFullYear()} IMEM Lifts Norway AS. Alle rettigheter reservert.
           </p>
