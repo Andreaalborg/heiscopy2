@@ -53,7 +53,7 @@ const Services = () => {
             Hva vi tilbyr
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Som totallerandør leverer vi alt innen heis – fra nyinstallasjon til service og modernisering
+            Som totalleverandør leverer vi alt innen heis – fra nyinstallasjon til service og modernisering
           </p>
         </motion.div>
 

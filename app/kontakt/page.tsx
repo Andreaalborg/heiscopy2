@@ -16,7 +16,7 @@ export default function ContactPage() {
             src="/images/hero-kontakt.png"
             alt="IMEM team planlegger"
             fill
-            className="object-cover object-[center_30%] md:object-[center_35%]"
+            className="object-cover object-center"
             priority
           />
           {/* Dark overlay */}
@@ -60,11 +60,8 @@ export default function ContactPage() {
                 <h2 className="text-xl font-semibold text-gray-900 mb-2">
                   Ring oss
                 </h2>
-                <p className="text-3xl font-bold text-sky-600 mb-2">
+                <p className="text-3xl font-bold text-sky-600">
                   21 41 81 03
-                </p>
-                <p className="text-gray-500">
-                  Vi svarer på telefon i kontortiden
                 </p>
               </motion.a>
 
@@ -82,11 +79,8 @@ export default function ContactPage() {
                 <h2 className="text-xl font-semibold text-gray-900 mb-2">
                   Send e-post
                 </h2>
-                <p className="text-2xl font-bold text-sky-600 mb-2">
+                <p className="text-2xl font-bold text-sky-600">
                   post@imemnorway.no
-                </p>
-                <p className="text-gray-500">
-                  Vi svarer så raskt vi kan
                 </p>
               </motion.a>
             </div>

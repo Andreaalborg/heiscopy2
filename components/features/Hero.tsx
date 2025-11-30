@@ -16,7 +16,7 @@ const Hero = () => {
           src="/images/hero-bg.jpg"
           alt="IMEM heisteknikere på jobb"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
         />
         {/* Dark overlay */}
@@ -37,7 +37,7 @@ const Hero = () => {
             </div>
 
             <h1 className="heading-1 text-white mb-6">
-              Totallerandør innen{' '}
+              Totalleverandør innen{' '}
               <span className="text-sky-400">heisløsninger</span>
             </h1>
             
@@ -65,26 +65,6 @@ const Hero = () => {
               </a>
             </div>
 
-            {/* Trust Indicators */}
-            <motion.div 
-              className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-white/10"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-            >
-              <div>
-                <div className="text-3xl font-bold text-sky-400">Erfarne</div>
-                <div className="text-sm text-gray-400">fagfolk</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-sky-400">Sentralt</div>
-                <div className="text-sm text-gray-400">godkjent</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-sky-400">24/7</div>
-                <div className="text-sm text-gray-400">service</div>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Right side - Empty for background image to show */}

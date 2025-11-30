@@ -6,7 +6,7 @@ import Footer from '@/components/layout/Footer'
 export const metadata: Metadata = {
   title: {
     template: '%s | IMEM Lifts Norway',
-    default: 'IMEM Lifts Norway AS - Totallerandør innen heisløsninger'
+    default: 'IMEM Lifts Norway AS - Totalleverandør innen heisløsninger'
   },
   description: 'IMEM Lifts Norway AS er din autoriserte IMEM-partner i Norge. Vi leverer nyinstallasjon, modernisering, service og 24/7 nødservice for heiser. Sentralt godkjent.',
   keywords: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     locale: 'nb_NO',
     url: 'https://imemnorway.no',
     siteName: 'IMEM Lifts Norway AS',
-    title: 'IMEM Lifts Norway AS - Totallerandør innen heisløsninger',
+    title: 'IMEM Lifts Norway AS - Totalleverandør innen heisløsninger',
     description: 'Autorisert IMEM-partner i Norge. Nyinstallasjon, modernisering, service og 24/7 nødservice.',
     images: [
       {
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'IMEM Lifts Norway AS',
-    description: 'Totallerandør innen heisløsninger - Autorisert IMEM-partner i Norge',
+    description: 'Totalleverandør innen heisløsninger - Autorisert IMEM-partner i Norge',
   },
   robots: {
     index: true,

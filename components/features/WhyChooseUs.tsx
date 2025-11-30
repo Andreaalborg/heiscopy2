@@ -28,7 +28,7 @@ const reasons = [
   },
   {
     icon: GlobeAltIcon,
-    title: 'Totallerandør',
+    title: 'Totalleverandør',
     description: 'Alt innen heis – nyinstallasjon, modernisering, service og 24/7 nødservice.'
   }
 ]

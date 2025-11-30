@@ -23,7 +23,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Totallerandør innen heisløsninger. Vi leverer nyinstallasjon, 
+              Totalleverandør innen heisløsninger. Vi leverer nyinstallasjon, 
               modernisering, service og 24/7 nødservice.
             </p>
             
@@ -98,7 +98,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://imem.com/en/about/" 
+                  href="https://imem.com/en/manufacturer-of-special-lifts-imem-lifts/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-sky-400 transition-colors inline-flex items-center gap-1"
@@ -113,9 +113,20 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-gray-700 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <p className="text-sm text-gray-400">
             &copy; {new Date().getFullYear()} IMEM Lifts Norway AS. Alle rettigheter reservert.
+          </p>
+          <p className="text-sm text-gray-500">
+            Laget av{' '}
+            <a 
+              href="https://intellisense.no" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-gray-300"
+            >
+              Intellisense AS
+            </a>
           </p>
           <p className="text-sm text-gray-500">
             Autorisert partner for{' '}
