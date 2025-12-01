@@ -13,8 +13,8 @@ import {
 const reasons = [
   {
     icon: CheckBadgeIcon,
-    title: 'Autorisert IMEM-partner',
-    description: 'Offisiell forhandler med direkte tilgang til IMEMs kvalitetsprodukter og teknisk support.'
+    title: 'IMEM i Norge',
+    description: 'Vi er IMEM i Norge – med direkte tilgang til IMEMs kvalitetsprodukter og teknisk support.'
   },
   {
     icon: UserGroupIcon,
@@ -29,7 +29,7 @@ const reasons = [
   {
     icon: GlobeAltIcon,
     title: 'Totalleverandør',
-    description: 'Alt innen heis – nyinstallasjon, modernisering, service og 24/7 nødservice.'
+    description: 'Alt innen heis – nyinstallasjon, modernisering, service og 24/7 beredskap.'
   }
 ]
 

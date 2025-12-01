@@ -31,11 +31,6 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-              <span className="text-sm text-white/90">Autorisert IMEM-partner i Norge</span>
-            </div>
-
             <h1 className="heading-1 text-white mb-6">
               Totalleverandør innen{' '}
               <span className="text-sky-400">heisløsninger</span>

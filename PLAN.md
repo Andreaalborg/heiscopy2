@@ -272,3 +272,4 @@ public/images/
 
 Når du er klar, starter vi med **Fase 1: Opprydding** - å slette de sidene og komponentene vi ikke trenger.
 
+

@@ -32,8 +32,8 @@ const services = [
   },
   {
     icon: ArrowPathIcon,
-    title: '24/7 Nødservice',
-    description: 'Rask respons ved nødsituasjoner. Vårt erfarne team er tilgjengelig døgnet rundt.',
+    title: '24/7 Beredskap',
+    description: 'Rask respons når du trenger det. Vårt erfarne team er tilgjengelig døgnet rundt.',
     link: '/kontakt'
   }
 ]

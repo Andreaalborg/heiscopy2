@@ -19,12 +19,12 @@ const Footer = () => {
               />
               <div>
                 <h3 className="text-xl font-bold">IMEM Lifts Norway AS</h3>
-                <p className="text-sm text-gray-400">Autorisert IMEM-partner</p>
+                <p className="text-sm text-gray-400">Org.nr: 935 986 648 MVA</p>
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               Totalleverandør innen heisløsninger. Vi leverer nyinstallasjon, 
-              modernisering, service og 24/7 nødservice.
+              modernisering, service og 24/7 beredskap.
             </p>
             
             {/* Contact Info */}
@@ -129,7 +129,6 @@ const Footer = () => {
             </a>
           </p>
           <p className="text-sm text-gray-500">
-            Autorisert partner for{' '}
             <a 
               href="https://imem.com/en/" 
               target="_blank" 
@@ -138,6 +137,7 @@ const Footer = () => {
             >
               IMEM
             </a>
+            {' '}i Norge
           </p>
         </div>
       </div>
