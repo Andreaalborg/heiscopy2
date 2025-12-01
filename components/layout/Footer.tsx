@@ -128,17 +128,6 @@ const Footer = () => {
               Intellisense AS
             </a>
           </p>
-          <p className="text-sm text-gray-500">
-            <a 
-              href="https://imem.com/en/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-sky-400 hover:text-sky-300"
-            >
-              IMEM
-            </a>
-            {' '}i Norge
-          </p>
         </div>
       </div>
     </footer>
