@@ -74,7 +74,8 @@ export default function RootLayout({
   return (
     <html lang="no">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         <link rel="canonical" href="https://imemnorway.no" />
       </head>
       <body className="antialiased min-h-screen flex flex-col bg-white">
