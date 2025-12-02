@@ -45,7 +45,7 @@ const products = [
     link: 'https://imem.com/en/lifts/'
   },
   {
-    title: 'Service og vedlikehold',
+    title: 'Service, alarm og vedlikehold',
     description: 'Regelmessig service og vedlikehold for optimal drift og sikkerhet. Vi tilbyr serviceavtaler tilpasset dine behov.',
     icon: ShieldCheckIcon,
     link: '/kontakt'
@@ -81,7 +81,7 @@ export default function ProdukterPage() {
               IMEM Produkter
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Som autorisert IMEM-partner tilbyr vi hele produktsortimentet fra IMEM. 
+              Vi tilbyr hele produktsortimentet fra IMEM. 
               Utforsk våre løsninger og finn produktinformasjon på IMEM sin hovedside.
             </p>
             <a 
@@ -174,7 +174,7 @@ export default function ProdukterPage() {
                 til kunder over hele verden.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                Som autorisert IMEM-partner i Norge har vi direkte tilgang til hele 
+                Som IMEM i Norge har vi direkte tilgang til hele 
                 produktsortimentet, reservedeler og teknisk support fra fabrikken.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
