@@ -121,8 +121,8 @@ export default function ContactPage() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="mt-12 text-center"
             >
-              <p className="text-gray-600">
-                Vi ser frem til å høre fra deg!
+              <p className="text-lg text-gray-700">
+                Ta gjerne kontakt – vi er alltid klare for en prat!
               </p>
             </motion.div>
           </div>
