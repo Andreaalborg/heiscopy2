@@ -121,8 +121,8 @@ export default function ContactPage() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="mt-12 text-center"
             >
-              <p className="text-lg text-gray-700">
-                Ta gjerne kontakt – vi er alltid klare for en prat!
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+                Enten du trenger en ny heis, ønsker å oppgradere eksisterende anlegg, eller har spørsmål om service og vedlikehold – vi er her for å hjelpe. Ta kontakt for en uforpliktende prat!
               </p>
             </motion.div>
           </div>
