@@ -114,7 +114,7 @@ export default function ContactPage() {
               </div>
             </motion.div>
 
-            {/* IMEM Link Section */}
+            {/* CTA Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -122,16 +122,16 @@ export default function ContactPage() {
               className="mt-12 text-center"
             >
               <p className="text-gray-600 mb-4">
-                For mer informasjon om IMEM og våre produkter, besøk hovedsiden:
+                Vil du vite mer om våre produkter og tjenester?
               </p>
               <a 
-                href="https://imem.com/en/contact/" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="/produkter"
                 className="inline-flex items-center gap-2 text-sky-600 font-medium hover:text-sky-700 transition-colors"
               >
-                Kontakt IMEM hovedkontor
-                <ArrowTopRightOnSquareIcon className="w-5 h-5" />
+                Se våre produkter
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
               </a>
             </motion.div>
           </div>
